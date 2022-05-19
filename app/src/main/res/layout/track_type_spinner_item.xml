@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_corners">
+
+    <TextView android:id="@+id/txt_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/replay_spinner_item_none"
+        android:textColor="@color/text_intense_light"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_icon"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+    <ImageView android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_activity_24px"
+        android:layout_margin="@dimen/padding_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_text"
+        android:contentDescription="@string/track_image_description"
+        android:layout_marginEnd="@dimen/padding_small"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

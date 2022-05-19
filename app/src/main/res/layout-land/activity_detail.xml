@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_very_dark"
+    tools:context=".activity.DetailActivity"
+    android:id="@+id/activity_detail"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/track_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/DetailInfoName"
+        android:background="@drawable/rounded_corners_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/duration"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/duration"
+        style="@style/DetailInfoTitle"
+        android:background="@drawable/rounded_corners"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stats_time_default_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/track_name" />
+
+    <include layout="@layout/detail_column_a"
+        android:id="@+id/column_a"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/column_b"
+        app:layout_constraintTop_toBottomOf="@id/duration"
+        app:layout_constraintBottom_toTopOf="@id/spinner_track_type"
+        />
+
+    <include layout="@layout/detail_column_b"
+        android:id="@+id/column_b"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/column_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/duration"
+        app:layout_constraintBottom_toTopOf="@id/spinner_track_type"
+        />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_track_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+        android:layout_margin="@dimen/padding_small"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save_track_text"
+        android:onClick="buttonSaveOnClick"
+        android:textColor="@color/text_intense_light"
+        android:background="@color/color_ocean"
+        android:padding="@dimen/padding_small"
+        android:layout_margin="@dimen/padding_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_reset" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/options_reset_track_text"
+        android:onClick="buttonResetOnClick"
+        android:textColor="@color/text_intense_light"
+        android:background="#5A0303"
+        android:padding="@dimen/padding_small"
+        android:layout_margin="@dimen/padding_small"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_save"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

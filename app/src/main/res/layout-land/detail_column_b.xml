@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/col_a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/col_b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/DetailInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_distance"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/distance_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/col_b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/col_a"
+        app:layout_constraintEnd_toStartOf="@id/col_c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/DetailInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/avg_elevation"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/avg_elevation_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/col_c"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/col_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/DetailInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/checkpoints_count"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/count_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/checkpoints_hint" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

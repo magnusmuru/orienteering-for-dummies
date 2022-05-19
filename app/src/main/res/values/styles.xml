@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DetailInfo">
+        <item name="borderWidth">2dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="DetailInfoTitle" parent="DetailInfo">
+        <item name="android:textColor">@color/text_intense_light</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="DetailInfoName" parent="DetailInfo">
+        <item name="android:textColor">@color/text_intense_light</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="DetailInfoBig">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="DetailInfoHint">
+        <item name="android:textColor">@color/text_semi_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="HistoryInfoTitle">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="HistoryInfo">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="HistoryInfoHint">
+        <item name="android:textColor">@color/text_semi_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="HistoryEdit">
+
+    </style>
+
+    <style name="HistoryEditButton">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:minWidth">10dp</item>
+    </style>
+
+    <style name="SettingsTitle">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="SettingsLabel">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="SettingsEditText">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="AppCompatAlertWarnDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/text_orange</item>
+        <item name="android:textColorPrimary">@color/color_danger</item>
+        <item name="android:background">@color/color_very_dark</item>
+    </style>
+
+    <style name="AppCompatAlertInfoDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/text_light</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:background">@color/color_very_dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
