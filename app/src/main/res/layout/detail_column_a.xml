@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        style="@style/DetailInfo">
+
+        <TextView
+            android:id="@+id/avg_speed"
+            style="@style/DetailInfoBig"
+            android:text="@string/stats_speed_default_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/speed_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        style="@style/DetailInfo">
+
+        <TextView
+            android:id="@+id/elevation_gained"
+            style="@style/DetailInfoBig"
+            android:text="@string/stats_distance_default_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/elevation_gained_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        style="@style/DetailInfo">
+
+        <TextView
+            android:id="@+id/drift"
+            style="@style/DetailInfoBig"
+            android:text="@string/stats_distance_default_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/drift_hint" />
+
+    </LinearLayout>
+
+</LinearLayout>

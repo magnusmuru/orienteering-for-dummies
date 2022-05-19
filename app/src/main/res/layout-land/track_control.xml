@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="64dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:background="@color/color_very_dark"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:padding="@dimen/padding_track_controls"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_time_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/avg_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_speed_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+    </LinearLayout>
+
+
+    <!-- no onclick allowed on remoteviews! if you are reusing this component, attach onClick in code-->
+    <ImageButton
+        android:id="@+id/btn_add_cp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:padding="@dimen/padding_track_controls"
+        android:background="@color/track_control_button_background_color"
+        android:src="@drawable/ic_flag_24px"
+        android:contentDescription="@string/add_cp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:padding="@dimen/padding_track_controls"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/distance_cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/drift_cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/avg_speed_cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_speed_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+    </LinearLayout>
+
+    <!-- no onclick allowed on remoteviews! if you are reusing this component, attach onClick in code-->
+    <ImageButton
+        android:id="@+id/btn_add_wp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:padding="@dimen/padding_track_controls"
+        android:background="@color/track_control_button_background_color"
+        android:src="@drawable/ic_add_location_24px"
+        android:contentDescription="@string/add_wp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:padding="@dimen/padding_track_controls"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/distance_wp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/drift_wp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+        <TextView
+            android:id="@+id/avg_speed_wp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_speed_default_text"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/stats_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

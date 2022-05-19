@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/DetailInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_distance"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/distance_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/DetailInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/avg_elevation"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_distance_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/avg_elevation_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/DetailInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/checkpoints_count"
+            style="@style/DetailInfoBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/count_default_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailInfoHint"
+            android:text="@string/checkpoints_hint" />
+    </LinearLayout>
+</LinearLayout>
