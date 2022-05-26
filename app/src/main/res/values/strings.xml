@@ -43,6 +43,7 @@
     <string name="register_instead">Register instead</string>
     <string name="login_instead">Log in instead</string>
     <string name="auto_sync_tracks">Auto sync tracks</string>
+    <string name="sync_interval">Sync Interval</string>
     <string name="pace_vs_speed">Use pace instead of speed</string>
     <string name="btn_delete">DELETE</string>
     <string name="btn_rename">RENAME</string>

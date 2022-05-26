@@ -4,7 +4,7 @@
     android:id="@+id/spinner_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="@color/text_orange"
+    android:textColor="@color/text_purple"
     android:background="@color/track_control_button_background_color"
     android:textSize="@dimen/spinner_text_size"
     android:gravity="center"
