@@ -36,17 +36,34 @@
         <entry key="..\:/Users/murum/Desktop/Sporting/SportsApp-master/app/src/main/res/layout/track_control.xml" value="0.21041666666666667" />
         <entry key="..\:/Users/murum/Desktop/Sporting/SportsApp-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3235" />
         <entry key="..\:/Users/murum/Desktop/Sporting/SportsApp-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3235" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_activity_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_add_location_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_flag_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_flag_filled_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_not_interested_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_pause_circle_outline_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/ic_play_circle_outline_24px.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/round_button.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/drawable/rounded_corners.xml" value="0.2405" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout-land/activity_main.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/activity_detail.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/activity_maps.xml" value="0.2674772036474164" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/activity_overview.xml" value="0.3342391304347826" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/activity_settings.xml" value="0.3109375" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/detail_column_a.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/detail_column_b.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/layout_register.xml" value="0.2674772036474164" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/layout_settings.xml" value="0.3342391304347826" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/maps_spinner_item.xml" value="0.2674772036474164" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/overview_item.xml" value="0.3342391304347826" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/track_control.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/track_history_item.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/layout/track_type_spinner_item.xml" value="0.2674772036474164" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2405" />
+        <entry key="..\:/Users/murum/Documents/Repos/Android/Orienteering/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2405" />
       </map>
     </option>
   </component>
