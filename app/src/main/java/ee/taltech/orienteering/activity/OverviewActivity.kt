@@ -12,7 +12,6 @@ import ee.taltech.orienteering.component.spinner.adapter.OverviewTypeSpinnerAdap
 import ee.taltech.orienteering.db.domain.User
 import ee.taltech.orienteering.db.repository.TrackSummaryRepository
 import ee.taltech.orienteering.db.repository.UserRepository
-import ee.taltech.orienteering.detector.FlingDetector
 import ee.taltech.orienteering.track.TrackType
 import ee.taltech.orienteering.track.converters.Converter
 
@@ -35,8 +34,6 @@ class OverviewActivity : AppCompatActivity() {
 
     private var user: User? = null
 
-    private lateinit var flingDetector: FlingDetector
-
     private lateinit var overviewTypeSpinner: Spinner
     private lateinit var linearLayoutScrollContent: LinearLayout
 
@@ -46,8 +43,6 @@ class OverviewActivity : AppCompatActivity() {
 
         overviewTypeSpinner = findViewById(R.id.spinner_overview_type)
         linearLayoutScrollContent = findViewById(R.id.linear_scroll)
-
-        flingDetector = FlingDetector(this)
 
         setUpSpinners()
     }
@@ -61,14 +56,6 @@ class OverviewActivity : AppCompatActivity() {
         super.onDestroy()
         trackSummaryRepository.close()
         userRepository.close()
-    }
-
-
-    // ======================================== FLING DETECTION =======================================
-
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        flingDetector.update(ev)
-        return super.dispatchTouchEvent(ev)
     }
 
     // ============================================= HELPER FUNCTIONS ===================================================

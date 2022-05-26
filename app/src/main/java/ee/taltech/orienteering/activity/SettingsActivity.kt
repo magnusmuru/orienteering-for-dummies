@@ -2,7 +2,6 @@ package ee.taltech.orienteering.activity
 
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
 import android.view.View
 import android.view.Window
 import android.widget.*
@@ -18,7 +17,6 @@ import ee.taltech.orienteering.api.dto.RegisterDto
 import ee.taltech.orienteering.component.spinner.adapter.TrackTypeSpinnerAdapter
 import ee.taltech.orienteering.db.domain.User
 import ee.taltech.orienteering.db.repository.*
-import ee.taltech.orienteering.detector.FlingDetector
 import ee.taltech.orienteering.track.TrackType
 import ee.taltech.orienteering.util.HashUtils
 import ee.taltech.orienteering.util.TrackUtils
@@ -44,8 +42,6 @@ class SettingsActivity : AppCompatActivity() {
     private var user: User? = null
     private var isRegister = false
 
-    private lateinit var flingDetector: FlingDetector
-
     private lateinit var editTextUsername: EditText
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
@@ -65,6 +61,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var switchAutoSync: Switch
     private lateinit var switchSpeedMode: Switch
     private lateinit var seekBarSyncInterval: SeekBar
+    private lateinit var seekBarSyncLabel: TextView
 
     private lateinit var buttonRegister: Button
     private lateinit var buttonSyncTrack: Button
@@ -81,8 +78,6 @@ class SettingsActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         setContentView(R.layout.activity_settings)
-
-        flingDetector = FlingDetector(this)
 
         textTitle = findViewById(R.id.txt_title)
         editTextUsername = findViewById(R.id.txt_username)
@@ -102,6 +97,7 @@ class SettingsActivity : AppCompatActivity() {
         switchAutoSync = findViewById(R.id.switch_auto_sync)
         switchSpeedMode = findViewById(R.id.switch_speed_pace)
         seekBarSyncInterval = findViewById(R.id.seek_bar_sync_interval)
+        seekBarSyncLabel = findViewById(R.id.seek_bar_sync_label)
 
         buttonSyncTrack = findViewById(R.id.btn_sync_track)
         buttonLogOut = findViewById(R.id.btn_logout)
@@ -111,7 +107,15 @@ class SettingsActivity : AppCompatActivity() {
         switchSpeedMode.setOnCheckedChangeListener { _, isChecked -> onSpeedModeChange(isChecked) }
         switchAutoSync.setOnCheckedChangeListener { _, isChecked -> onAutoSyncChange(isChecked) }
         seekBarSyncInterval.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                val value = i * (seekBar.width - 2 * seekBar.thumbOffset) / seekBar.max
+                seekBarSyncLabel.text = i.toString()
+                seekBarSyncLabel.measure(0, 0)
+                val textWidth =  seekBarSyncLabel.measuredWidth
+                val firstRemainder = seekBar.thumbOffset - textWidth
+                val result = firstRemainder / 2
+                seekBarSyncLabel.x = (seekBar.x + value + result)
+            }
             override fun onStartTrackingTouch(seekBar: SeekBar) {}
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 onSyncIntervalChanged()
@@ -184,13 +188,6 @@ class SettingsActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         isRegister = !savedInstanceState.getBoolean(BUNDLE_IS_REGISTER)
         onToggleRegister()
-    }
-
-    // ======================================== FLING DETECTION =======================================
-
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        flingDetector.update(ev)
-        return super.dispatchTouchEvent(ev)
     }
 
     // ====================================== REGISTER LOGIC ===========================================

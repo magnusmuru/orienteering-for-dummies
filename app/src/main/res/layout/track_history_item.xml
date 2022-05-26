@@ -29,7 +29,8 @@
             android:id="@+id/track_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corners_light"
+            android:layout_marginStart="1dp"
+            android:background="@drawable/rounded_corners"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/track_image"
             app:layout_constraintTop_toTopOf="parent">

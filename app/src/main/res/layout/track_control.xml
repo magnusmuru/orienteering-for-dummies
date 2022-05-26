@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_distance_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_time_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_speed_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
     </LinearLayout>
 
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_distance_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_distance_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_speed_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
     </LinearLayout>
 
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_distance_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -127,7 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_distance_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
         <TextView
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stats_speed_default_text"
-            android:textColor="@color/text_orange"
+            android:textColor="@color/text_purple"
             android:textSize="@dimen/stats_text_size" />
 
     </LinearLayout>

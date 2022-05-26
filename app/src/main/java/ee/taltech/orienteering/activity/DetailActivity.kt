@@ -22,7 +22,6 @@ import ee.taltech.orienteering.R
 import ee.taltech.orienteering.component.spinner.adapter.TrackTypeSpinnerAdapter
 import ee.taltech.orienteering.db.domain.User
 import ee.taltech.orienteering.db.repository.UserRepository
-import ee.taltech.orienteering.detector.FlingDetector
 import ee.taltech.orienteering.track.TrackType
 import ee.taltech.orienteering.track.converters.Converter
 import ee.taltech.orienteering.track.pracelable.DetailedTrackData
@@ -54,8 +53,6 @@ class DetailActivity : AppCompatActivity() {
 
     private var user: User? = null
 
-    private lateinit var flingDetector: FlingDetector
-
     private lateinit var buttonSave: Button
     private lateinit var buttonReset: Button
 
@@ -78,7 +75,6 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         setContentView(R.layout.activity_detail)
-        flingDetector = FlingDetector(this)
         broadcastReceiverIntentFilter.addAction(C.TRACK_DETAIL_RESPONSE)  // Remove?
 
         buttonSave = findViewById(R.id.btn_save)
@@ -102,8 +98,6 @@ class DetailActivity : AppCompatActivity() {
             intent.putExtra(C.TRACK_SET_NAME_DATA, textEditTrackName.text.toString())
             LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
         }
-
-        flingDetector.onFlingDown = Runnable { onFlingDown() }
     }
 
     // ============================================== ON CLICK CALLBACKS ==============================================
@@ -195,18 +189,6 @@ class DetailActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putInt(BUNDLE_TRACK_TYPE, trackType)
         super.onSaveInstanceState(outState)
-    }
-
-    // ======================================== FLING DETECTION =======================================
-
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        flingDetector.update(ev)
-        textEditTrackName.clearFocus()
-        return super.dispatchTouchEvent(ev)
-    }
-
-    private fun onFlingDown() {
-        moveTaskToBack(false)
     }
 
     // ====================================== BROADCAST RECEIVER ======================================

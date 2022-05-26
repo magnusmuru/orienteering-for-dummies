@@ -156,10 +156,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
-        android:background="#03515A"
+        android:background="@drawable/rounded_corners"
         android:padding="@dimen/padding_small"
         android:text="@string/txt_register"
-        android:textColor="@color/text_intense_light"
+        android:textColor="@color/text_purple"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

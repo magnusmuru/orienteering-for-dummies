@@ -46,7 +46,6 @@ import ee.taltech.orienteering.BuildConfig
 import ee.taltech.orienteering.C
 import ee.taltech.orienteering.R
 import ee.taltech.orienteering.component.spinner.*
-import ee.taltech.orienteering.detector.FlingDetector
 import ee.taltech.orienteering.service.LocationService
 import ee.taltech.orienteering.db.ReadDatabaseTask
 import ee.taltech.orienteering.db.domain.TrackSummary
@@ -149,8 +148,6 @@ class MapsActivity : AppCompatActivity(), SensorEventListener, OnMapReadyCallbac
     private lateinit var accelerometer: Sensor
     private lateinit var magnetometer: Sensor
 
-    private lateinit var flingDetector: FlingDetector
-
     private lateinit var mMap: GoogleMap
     private lateinit var wpIconGenerator: IconGenerator
     private lateinit var cpIconGenerator: IconGenerator
@@ -198,7 +195,6 @@ class MapsActivity : AppCompatActivity(), SensorEventListener, OnMapReadyCallbac
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(TYPE_ACCELEROMETER)
         magnetometer = sensorManager.getDefaultSensor(TYPE_MAGNETIC_FIELD)
-        flingDetector = FlingDetector(this)
 
         broadcastReceiverIntentFilter.addAction(C.LOCATION_UPDATE_ACTION)
         broadcastReceiverIntentFilter.addAction(C.TRACK_STATS_UPDATE_ACTION)
@@ -246,8 +242,6 @@ class MapsActivity : AppCompatActivity(), SensorEventListener, OnMapReadyCallbac
         spinnerCompassMode = findViewById(R.id.spinner_compass_mode)
         spinnerRotationMode = findViewById(R.id.spinner_rotation_mode)
         spinnerSettingsMode = findViewById(R.id.spinner_settings_mode)
-
-        flingDetector.onFlingUp = Runnable { onFlingUp() }
 
         TrackType.values().forEach { type ->
             trackTypeMaxSpeeds[type] = trackSummaryRepository.readMaxSpeed(type)
@@ -720,23 +714,6 @@ class MapsActivity : AppCompatActivity(), SensorEventListener, OnMapReadyCallbac
         val intent = Intent(C.TRACK_ACTION_ADD_CP)
         intent.putExtra(C.TRACK_ACTION_ADD_CP_DATA, lastLocation as Parcelable)
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
-    }
-
-    // =========================================== FLING DETECTION ===============================================
-
-    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
-        Log.d(TAG, "onTouch")
-        flingDetector.update(event)
-        return super.dispatchTouchEvent(event)
-    }
-
-    private fun onFlingUp() {
-        val intent = Intent(this, DetailActivity::class.java)
-        startActivity(intent)
-        overridePendingTransition(
-            R.anim.slide_in_from_bottom,
-            R.anim.slide_out_to_top
-        )
     }
 
     // ============================================== BROADCAST RECEIVER =============================================

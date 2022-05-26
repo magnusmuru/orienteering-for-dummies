@@ -4,11 +4,13 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +24,6 @@ import ee.taltech.orienteering.component.imageview.TrackTypeIcons
 import ee.taltech.orienteering.component.spinner.ReplaySpinnerItems
 import ee.taltech.orienteering.component.spinner.adapter.HistorySpinnerAdapter
 import ee.taltech.orienteering.db.domain.TrackSummary
-import ee.taltech.orienteering.detector.FlingDetector
 import ee.taltech.orienteering.track.TrackType
 import ee.taltech.orienteering.track.converters.Converter
 import ee.taltech.orienteering.component.view.TrackIconImageView
@@ -58,8 +59,6 @@ class HistoryActivity : AppCompatActivity() {
     private var selectedItems = hashMapOf<Long, Int>()
     private var isPermissionsGranted = false
 
-    private lateinit var flingDetector: FlingDetector
-
     private lateinit var scrollViewHistory: ScrollView
     private lateinit var linearLayoutScrollContent: LinearLayout
 
@@ -71,8 +70,6 @@ class HistoryActivity : AppCompatActivity() {
 
         // scrollViewHistory = findViewById(R.id.scroll_history)
         linearLayoutScrollContent = findViewById(R.id.linear_scroll)
-
-        flingDetector = FlingDetector(this)
 
         isPermissionsGranted = checkPermissions()
     }
@@ -166,13 +163,6 @@ class HistoryActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         selectedItems = savedInstanceState.getSerializable(BUNDLE_SELECTED_REPLAYS) as? HashMap<Long, Int> ?: hashMapOf()
-    }
-
-    // ============================= FLING DETECTOR CALLBACKS ==========================
-
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        flingDetector.update(ev)
-        return super.dispatchTouchEvent(ev)
     }
 
     // ================================= HELPER FUNCTION =================================
@@ -269,7 +259,7 @@ class HistoryActivity : AppCompatActivity() {
         val shouldProvideRationale =
             ActivityCompat.shouldShowRequestPermissionRationale(
                 this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                Manifest.permission.MANAGE_EXTERNAL_STORAGE
             )
         // Provide an additional rationale to the user. This would happen if the user denied the
         // request previously, but didn't check the "Don't ask again" checkbox.
@@ -283,7 +273,7 @@ class HistoryActivity : AppCompatActivity() {
                     // Request permission
                     ActivityCompat.requestPermissions(
                         this,
-                        arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                        arrayOf(Manifest.permission.MANAGE_EXTERNAL_STORAGE),
                         C.REQUEST_PERMISSIONS_REQUEST_CODE
                     )
                 }
@@ -295,7 +285,7 @@ class HistoryActivity : AppCompatActivity() {
             // previously and checked "Never ask again".
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                arrayOf(Manifest.permission.MANAGE_EXTERNAL_STORAGE),
                 C.REQUEST_PERMISSIONS_REQUEST_CODE
             )
         }
