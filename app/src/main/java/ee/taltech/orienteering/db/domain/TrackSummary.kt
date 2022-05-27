@@ -17,7 +17,7 @@ class TrackSummary(
     val elevationGained: Double,
     val maxSpeed: Double,
     val minSpeed: Double
-): Parcelable {
+) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readLong(),
         parcel.readString() ?: "",
